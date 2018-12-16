@@ -49,6 +49,7 @@ const itemsFromDefaultOptions = (options: optionsType) =>
  * A component for fast creation of an account centric dropdown
  */
 function AccountDropdown({
+  avatarIcon,
   avatarURL,
   name,
   description,
@@ -63,7 +64,7 @@ function AccountDropdown({
       triggerClassName="pr-0 leading-none"
       triggerContent={
         <React.Fragment>
-          <Avatar imageURL={avatarURL} />
+          <Avatar icon={avatarIcon} imageURL={avatarURL} />
           <span className="ml-2 d-none d-lg-block">
             <span className="text-default">{name}</span>
             <small className="text-muted d-block mt-1">{description}</small>
