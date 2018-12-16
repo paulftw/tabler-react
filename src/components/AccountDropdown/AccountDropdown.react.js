@@ -64,10 +64,12 @@ function AccountDropdown({
       triggerContent={
         <React.Fragment>
           <Avatar imageURL={avatarURL} />
-          <span className="ml-2 d-none d-lg-block">
-            <span className="text-default">{name}</span>
-            <small className="text-muted d-block mt-1">{description}</small>
-          </span>
+          {!name && !description ? null : (
+            <span className="ml-2 d-none d-lg-block">
+              <span className="text-default">{name}</span>
+              <small className="text-muted d-block mt-1">{description}</small>
+            </span>
+          )}
         </React.Fragment>
       }
       position="bottom-end"
